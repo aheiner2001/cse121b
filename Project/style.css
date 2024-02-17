@@ -110,7 +110,7 @@ main{
 }
 #leaders_of_church {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 10px;
   }
   
@@ -118,4 +118,5 @@ main{
     width: 100%;
     height: auto;
   }
-  
+
+   

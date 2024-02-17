@@ -6,7 +6,7 @@ const displayLeaders = (leaders) => {
     leaders.forEach(leader => {
         const article = document.createElement("article");
         const h3 = document.createElement("h3");
-        h3.textContent = leader.templeName;
+        h3.textContent = leader.leaderName;
         const img = document.createElement("img");
         img.src = leader.imageUrl;
         article.appendChild(h3);
@@ -17,7 +17,7 @@ const displayLeaders = (leaders) => {
 
 /* async getLeaders Function using fetch() */
 const getLeaders = async () => {
-    const response = await fetch("https://byui-cse.github.io/cse121b-ww-course/resources/temples.json");
+    const response = await fetch("json.json");
     leaderList = await response.json();
     displayLeaders(leaderList);
 }
