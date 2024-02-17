@@ -102,4 +102,20 @@ font-size: 25px;
     height: 100px;
     width: 100px;
     background-color: black;
+
+
 }
+main{
+ width: 100%;
+}
+#leaders_of_church {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+  }
+  
+  #leaders_of_church img {
+    width: 100%;
+    height: auto;
+  }
+  
