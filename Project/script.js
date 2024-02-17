@@ -15,16 +15,45 @@ const displayLeaders = (leaders) => {
     });
 }
 
-/* async getLeaders Function using fetch() */
 const getLeaders = async () => {
     const response = await fetch("json.json");
     leaderList = await response.json();
     displayLeaders(leaderList);
 }
 
-const reset = () => {
-    leaderElement.innerHTML = '';
+getLeaders();
+
+let text = "This is my website about the important topics in the church. Although this website contains many different pages, the home page is the what I wanted to do for my project";
+const mainElement = document.getElementById("main");
+const h5 =document.createElement("h5");
+const h1 =document.createElement("h1");
+h5.textContent = text;
+h1.textContent = "Apostles of the Lord"
+mainElement.appendChild(h1);
+mainElement.appendChild(h5);
+
+
+
+let hour = new Date().getHours();
+
+if (hour > 12){
+    hour -=12;
+    pm_am = "pm"
+}
+else{
+    pm_am = "am"
 }
 
-/* Call getLeaders to fetch and display the data when the page loads */
-getLeaders();
+
+if (new Date().getHours() < 12) {
+    document.getElementById("greeting").innerHTML = `Good Morning! Welcome to my page. The current time is ${hour}:${new Date().getMinutes()}${pm_am}`;
+    
+}
+
+else if (new Date().getHours() < 18) {
+    document.getElementById("greeting").innerHTML = `Good Afternoon! Welcome to my page. The current time is ${hour}:${new Date().getMinutes()}${pm_am}`;
+}
+
+else if (new Date().getHours() >= 18 ) {
+    document.getElementById("greeting").innerHTML = `Good Evening! Welcome to my page. The current time is ${new Date().getHours()}:${new Date().getMinutes()}${pm_am}`;
+}
