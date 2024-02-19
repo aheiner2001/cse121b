@@ -57,3 +57,5 @@ else if (new Date().getHours() < 18) {
 else if (new Date().getHours() >= 18 ) {
     document.getElementById("greeting").innerHTML = `Good Evening! Welcome to my page. The current time is ${new Date().getHours()}:${new Date().getMinutes()}${pm_am}`;
 }
+
+
