@@ -23,7 +23,7 @@ const getLeaders = async () => {
 
 getLeaders();
 
-let text = "This is my website about the important topics in the church. Although this website contains many different pages, the home page is the what I wanted to do for my project";
+let text = "";
 const mainElement = document.getElementById("main");
 const h5 =document.createElement("h5");
 const h1 =document.createElement("h1");
