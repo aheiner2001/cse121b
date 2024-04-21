@@ -1,13 +1,68 @@
-header{
+header {
     background-color: #223843;
     height: 10em;
     width: 100%;
+    color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0em 0em 5em 5em;
 }
 
-body{
-    
+body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #c0bdbd;
     margin: 0;
     padding: 0;
+}
+
+.recipiecontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30em;
+    width: 50%;
+    background-color: #2292A4;
+    border-radius: 1em;
+    margin: auto;
+    margin-top: 5em;
+}
+
+.inner {
+    background-color: #FFFAFB;
+    height: 95%;
+    width: 95%;
+    border-radius: 0.5em;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    align-items: stretch; /* Align items to stretch to fill the whole row */
+}
+
+.inner button {
+    height: 100%; /* Make the button height 100% of its parent (grid row height) */
+    width: 100%; /* Make the button width 100% of its parent (grid column width) */
+}
+
+.one {
+    grid-row: 4; /* Position the button in the second row */
+    grid-column: 2; /* Position the button in the first column */
+}
+.two {
+    grid-row: 4; /* Position the button in the second row */
+    grid-column: 4; /* Position the button in the first column */
+}
+
+.recipielist{
+    background-color: white;
+    border-radius: 0.5em;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    overflow-y: auto; /* * Make the list scrollable */
+    padding: 1em; 
+}
+.recipe {
+    margin-bottom: 1em; /* * Add margin between recipe items */
 }
