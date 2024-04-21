@@ -21,7 +21,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 30em;
-    width: 50%;
+    width: 75%;
     background-color: #2292A4;
     border-radius: 1em;
     margin: auto;
@@ -42,14 +42,20 @@ body {
 .inner button {
     height: 100%; /* Make the button height 100% of its parent (grid row height) */
     width: 100%; /* Make the button width 100% of its parent (grid column width) */
+    background-color:#223843 ;
+    color: #f4f4f4;
+    border: none;
+    border-radius: 2em;
+    font-weight: bolder;
+    font-size: large;
 }
 
 .one {
-    grid-row: 4; /* Position the button in the second row */
+    grid-row: 5; /* Position the button in the second row */
     grid-column: 2; /* Position the button in the first column */
 }
 .two {
-    grid-row: 4; /* Position the button in the second row */
+    grid-row: 5; /* Position the button in the second row */
     grid-column: 4; /* Position the button in the first column */
 }
 
@@ -57,7 +63,7 @@ body {
     background-color: white;
     border-radius: 0.5em;
     grid-row-start: 1;
-    grid-row-end: 4;
+    grid-row-end: 5;
     grid-column-start: 1;
     grid-column-end: 6;
     overflow-y: auto; /* * Make the list scrollable */
@@ -67,6 +73,10 @@ body {
     margin-bottom: 1em; /* * Add margin between recipe items */
 }
 .selected {
-    background-color: #ffc107; /* Change to desired highlight color */
+    background-color: rgb(233, 233, 233); /* Change to desired highlight color */
     color: #000; /* Change text color for better contrast */
+    height: 2em;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
 }
