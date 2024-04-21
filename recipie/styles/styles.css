@@ -66,3 +66,7 @@ body {
 .recipe {
     margin-bottom: 1em; /* * Add margin between recipe items */
 }
+.selected {
+    background-color: #ffc107; /* Change to desired highlight color */
+    color: #000; /* Change text color for better contrast */
+}
