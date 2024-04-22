@@ -1,18 +1,56 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const recipes = document.querySelectorAll('.recipielist .recipe');
-
-    recipes.forEach(function(recipe) {
-        recipe.addEventListener('click', function() {
-            // Toggle 'selected' class when a recipe is clicked
-            const selectedRecipe = document.querySelector('.recipielist .recipe.selected');
-            if (selectedRecipe && selectedRecipe !== this) {
-                // If another recipe is selected and it's not the clicked one, unselect it
-                selectedRecipe.classList.remove('selected');
+    document.addEventListener('DOMContentLoaded', function () {
+        const addRecipeForm = document.getElementById('addRecipeForm');
+        const recipeList = document.querySelector('.recipielist');
+        
+        // Load recipes from localStorage when the page loads
+        loadRecipes();
+    
+        addRecipeForm.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form submission
+    
+            const recipeName = document.getElementById('recipeName').value;
+            const recipeDescription = document.getElementById('recipeDescription').value;
+    
+            if (recipeName && recipeDescription) {
+                // Create new recipe object
+                const newRecipe = { name: recipeName, description: recipeDescription };
+                
+                // Add the new recipe to localStorage
+                addRecipeToLocalStorage(newRecipe);
+                
+                // Display the new recipe
+                displayRecipe(newRecipe);
+    
+                // Clear form inputs
+                document.getElementById('recipeName').value = '';
+                document.getElementById('recipeDescription').value = '';
+            } else {
+                alert('Please fill in both recipe name and description.');
             }
-            
-            this.classList.toggle('selected');
         });
+    
+        function loadRecipes() {
+            const recipes = JSON.parse(localStorage.getItem('recipes')) || [];
+            recipes.forEach(recipe => {
+                displayRecipe(recipe);
+            });
+        }
+    
+        function addRecipeToLocalStorage(recipe) {
+            const recipes = JSON.parse(localStorage.getItem('recipes')) || [];
+            recipes.push(recipe);
+            localStorage.setItem('recipes', JSON.stringify(recipes));
+        }
+    
+        function displayRecipe(recipe) {
+            const newRecipe = document.createElement('div');
+            newRecipe.classList.add('recipe');
+            newRecipe.textContent = recipe.name + ': ' + recipe.description;
+            recipeList.appendChild(newRecipe);
+        }
     });
+    
 
     const buttons = document.querySelectorAll('button');
     buttons.forEach(function(button) {
@@ -28,7 +66,8 @@ document.addEventListener('DOMContentLoaded', function() {
             } else if (buttonText === "View Recipe") {
                 window.location.href = "view_recipe.html"; // Change the URL to your desired page
             }
-            
+           
         });
     });
+    
 });

@@ -1,0 +1,248 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.wrapper{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ffffff, #9cd4ff);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+min-height: 100vh;
+   
+}
+
+.wrapper .container{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 20px;
+    
+
+}
+
+.container .ball{
+    background-color: rgb(84, 118, 147);
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    margin: 0 10px;
+    animation: load 3s infinite ease;
+}
+
+.container .one {
+    animation-delay: .1s;
+}
+
+.container .two {
+    animation-delay: .2s;
+}
+
+.container .three {
+    animation-delay: .3s;
+}
+
+.container .four {
+    animation-delay: .4s;
+}
+
+.container .five {
+    animation-delay: .5s;
+}
+
+.container .six {
+    animation-delay: .6s;
+}
+
+.container .seven {
+    animation-delay: .7s;
+}
+
+.container .eight {
+    animation-delay: .8s;
+}
+
+.container .nine {
+    animation-delay: .9s;
+}
+
+.container .ten {
+    animation-delay: 1s;
+}
+
+.container .eleven {
+    animation-delay: 1.1s;
+}
+
+.container .twelve {
+    animation-delay: 1.2s;
+}
+
+.container .thirteen {
+    animation-delay: 1.3s;
+}
+
+.container .fourteen {
+    animation-delay: 1.4s;
+}
+
+.container .fifteen {
+    animation-delay: 1.5s;
+}
+
+.container .sixteen {
+    animation-delay: 1.6s;
+}
+
+.container .seventeen {
+    animation-delay: 1.7s;
+}
+
+.container .eighteen {
+    animation-delay: 1.8s;
+}
+
+.container .nineteen {
+    animation-delay: 1.9s;
+}
+
+.container .twenty {
+    animation-delay: 2s;
+}
+
+.container .twenty-one {
+    animation-delay: 2.1s;
+}
+
+.container .twenty-two {
+    animation-delay: 2.2s;
+}
+
+.container .twenty-three {
+    animation-delay: 2.3s;
+}
+
+.container .twenty-four {
+    animation-delay: 2.4s;
+}
+
+.container .twenty-five {
+    animation-delay: 2.5s;
+}
+
+.container .twenty-six {
+    animation-delay: 2.6s;
+}
+
+.container .twenty-seven {
+    animation-delay: 2.7s;
+}
+
+.container .twenty-eight {
+    animation-delay: 2.8s;
+}
+
+.container .twenty-nine {
+    animation-delay: 2.9s;
+}
+
+.container .thirty {
+    animation-delay: 3s;
+}
+
+.container .thirty-one {
+    animation-delay: 3.1s;
+}
+
+.container .thirty-two {
+    animation-delay: 3.2s;
+}
+
+.container .thirty-three {
+    animation-delay: 3.3s;
+}
+
+.container .thirty-four {
+    animation-delay: 3.4s;
+}
+
+.container .thirty-five {
+    animation-delay: 3.5s;
+}
+
+.container .thirty-six {
+    animation-delay: 3.6s;
+}
+
+.container .thirty-seven {
+    animation-delay: 3.7s;
+}
+
+.container .thirty-eight {
+    animation-delay: 3.8s;
+}
+
+.container .thirty-nine {
+    animation-delay: 3.9s;
+}
+
+.container .forty {
+    animation-delay: 4s;
+}
+
+.container .forty-one {
+    animation-delay: 4.1s;
+}
+
+.container .forty-two {
+    animation-delay: 4.2s;
+}
+
+.container .forty-three {
+    animation-delay: 4.3s;
+}
+
+.container .forty-four {
+    animation-delay: 4.4s;
+}
+
+.container .forty-five {
+    animation-delay: 4.5s;
+}
+
+.container .forty-six {
+    animation-delay: 4.6s;
+}
+
+.container .forty-seven {
+    animation-delay: 4.7s;
+}
+
+.container .forty-eight {
+    animation-delay: 4.8s;
+}
+
+.container .forty-nine {
+    animation-delay: 4.9s;
+}
+
+.container .fifty {
+    animation-delay: 5s;
+}
+
+
+@keyframes load{
+    0%{
+        width: 30px;
+        height: 30px;
+        background-color: #4598a9;
+    }
+    50%{
+        width: 0px;
+        height: 0px;
+        background-color: #c4c081;
+    }
+}

@@ -42,9 +42,8 @@ body {
 .inner button {
     height: 100%; /* Make the button height 100% of its parent (grid row height) */
     width: 100%; /* Make the button width 100% of its parent (grid column width) */
-    background-color:#223843 ;
-    color: #f4f4f4;
-    border: none;
+    
+   
     border-radius: 2em;
     font-weight: bolder;
     font-size: large;
