@@ -26,8 +26,8 @@ min-height: 100vh;
 
 .container .ball{
     background-color: rgb(84, 118, 147);
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     border-radius: 50px;
     margin: 0 10px;
     animation: load 3s infinite ease;
@@ -236,13 +236,21 @@ min-height: 100vh;
 
 @keyframes load{
     0%{
-        width: 30px;
-        height: 30px;
+        width: 50px;
+        height: 50px;
         background-color: #4598a9;
+        
+        
+    }
+    25%{
+        margin: 25px;
     }
     50%{
         width: 0px;
         height: 0px;
         background-color: #c4c081;
+        margin: 50px;
+      
+        
     }
 }
